@@ -1,4 +1,4 @@
-package Com.sangram.JAVA_DSA;
+package Com.sangram.DSA;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -96,7 +96,7 @@ public static int singleusignXOR(int[] arr){
 }
 
 
-// using hashing
+// using hashing hducns d
     public static int hashig(int[] arr)
     {
         // finiding the max value in the arry
