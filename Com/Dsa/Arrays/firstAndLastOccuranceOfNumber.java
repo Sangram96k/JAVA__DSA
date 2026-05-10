@@ -53,7 +53,7 @@ Output: [-1,-1]
 public class firstAndLastOccuranceOfNumber {
 
     public static void main(String[] args) {
-      int[] ans=  firstandlatcccranceofelement(new int[] {1,2,2,3,4,4,4,5,5,6},4);
+      int[] ans=  firstandlatcccranceofelement(new int[]{1,1,2,2,2,4,5},2);
         for (int i:ans)
         {
             System.out.print(i+" ");
@@ -71,13 +71,13 @@ public class firstAndLastOccuranceOfNumber {
           return new int[]{first(arr,target),last(arr,target)};
     }
 
-    public static int last(int[] arr, int target) {
+    public static int first(int[] arr, int target) {
 
         int first=-1;
         int low = 0;
         int high= arr.length-1;
 
-        while (low<high)
+        while (low<=high)
         {
             int mid = low+(high-low)/2;
 
@@ -97,12 +97,12 @@ public class firstAndLastOccuranceOfNumber {
         return first;
     }
 
-    public static int first(int[] arr, int target) {
+    public static int last(int[] arr, int target) {
         int last=-1;
         int low = 0;
         int high= arr.length-1;
 
-        while (low<high)
+        while (low<=high)
         {
             int mid = low+(high-low)/2;
 
