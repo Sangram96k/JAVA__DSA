@@ -60,6 +60,57 @@ public class DeleteNodeInLL{
 
     }
 
+//    delete the first element
+    public Node deleteFirst(Node head)
+    {
+        if(head==null)
+        {
+            System.out.println("the head is null");
+            return head;
+        }
+        head = head.next;
+
+        return head;
+    }
+
+    public void deleteLast(Node head)
+    {
+        if (head==null)
+        {
+            System.out.println("head is null");
+        }
+        else {
+            Node current =head;
+            while(current.next!=null&& current.next.next!=null)
+            {
+                current=current.next;
+
+            }
+            current.next=null;
+        }
+    }
+
+    public  Node deleteAtPosition(Node head,int pos)
+    {
+
+        if (pos==1)
+        {
+            deleteFirst(head);
+        }
+        Node current =head;
+        for (int i=1;i<pos-1;i++)
+        {
+            if (current==null)
+            {
+                System.out.println("head is null");
+             break;
+            }
+            current=current.next;
+        }
+        current.next =current.next.next;
+        return head;
+    }
+
     public void display(Node head)
     {
         Node current = head;
@@ -93,6 +144,16 @@ public class DeleteNodeInLL{
 
         System.out.println("after deleting the node");
         del.display(first);
+
+//        System.out.println("after deleting the first element");
+//        del.display(del.deleteFirst(first));
+//        System.out.println("deleting the last element");
+//        del.deleteLast(first);
+//        del.display(first);
+
+        System.out.println("deleting at position");
+
+        del.display(del.deleteAtPosition(first,3));
 
 
 
